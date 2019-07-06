@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.common.pojo.UserBean">
+        <id property="userId" column="user_id" />
+        <id column="user_name" property="userName" />
+        <id column="password" property="password" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id, user_name, password
+    </sql>
+
+    <insert id="addUser" parameterType="com.example.demo.common.pojo.UserBean">
+        insert into users(user_name, password, create_time) values (#{userName}, #{password}, LOCALTIMESTAMP(0))
+    </insert>
+
+
+</mapper>
