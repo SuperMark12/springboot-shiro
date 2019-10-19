@@ -1,26 +1,26 @@
 server:
   port: 8082
 
-#Êı¾İ¿âÅäÖÃ
-srping:
+#æ•°æ®åº“é…ç½®
+spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/dsg
     username: dsg
     password: 123456
 
-#mybatis ÅäÖÃ
+#mybatis é…ç½®
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml
   typeAliasesPackage: com.example.demo.common.pojo
   global-config:
-    #Ë¢ĞÂmapper
+    #åˆ·æ–°mapper
     db-config:
-      #Ö÷¼üÀàĞÍ¡¡£°£º¡°Êı¾İ¿âID×ÔÔö¡±£¬£±ÓÃ»§ÊäÈëID£¬£²È«¾ÖÎ¨Ò»ID£¨Êı×ÖÀàĞÍÎ¨Ò»ID£©£¬3È«¾ÖÎ¨Ò»ID UUID£»
+      #ä¸»é”®ç±»å‹ã€€ï¼ï¼šâ€œæ•°æ®åº“IDè‡ªå¢â€ï¼Œï¼‘ç”¨æˆ·è¾“å…¥IDï¼Œï¼’å…¨å±€å”¯ä¸€IDï¼ˆæ•°å­—ç±»å‹å”¯ä¸€IDï¼‰ï¼Œ3å…¨å±€å”¯ä¸€ID UUIDï¼›
       id-type: auto
-      #×Ö¶Î²ßÂÔ 0£ººöÂÔÅĞ¶Ï  1£º·ÇNULLÅĞ¶Ï£¬2£º·Ç¿ÕÅĞ¶Ï
+      #å­—æ®µç­–ç•¥ 0ï¼šå¿½ç•¥åˆ¤æ–­  1ï¼šéNULLåˆ¤æ–­ï¼Œ2ï¼šéç©ºåˆ¤æ–­
       field-strategy: not_null
-      #ÍÕ·åÏÂ»®Ïß×ª»»
+      #é©¼å³°ä¸‹åˆ’çº¿è½¬æ¢
       column-underline: true
       logic-delete-value: 1
       logic-not-delete-value: 0
